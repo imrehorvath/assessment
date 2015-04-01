@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h1>DiNa Ruby Programmer - Excercise 1</h1>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Convert arabic numbers to English text</div>
+    <div class="panel-body">
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Input</div>
+        <div class="panel-body">
+          <%= form_tag convert_numerals_path, method: 'post' do %>
+
+            <div class="form-group">
+              <%= label_tag 'The arabic number' %>
+              <%= number_field_tag :number, params[:number], id: :number, class: 'form-control' %>
+              <%= submit_tag 'Submit', class: 'btn btn-default' %>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">Result</div>
+        <div class="panel-body" id="result-container">
+          <%= @result %>
+      </div>
+
+    </div>
+  </div>
+ </div>

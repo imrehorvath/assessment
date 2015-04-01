@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :numerals, only: :index do
+    collection do
+      post :convert
+    end
+  end
+
+  root 'numerals#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

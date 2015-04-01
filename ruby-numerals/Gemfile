@@ -32,6 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
+# Generates long winded string versions of numbers
+gem 'humanize'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -41,5 +48,19 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'database_cleaner'
+
+  # Behaviour Driven Development with elegance and joy
+  gem 'cucumber'
+
+  # Cucumber Generator and Runtime for Rails
+  gem 'cucumber-rails', require: false
+
+  # RSpec for Rails
+  gem 'rspec-rails'
+
+  # Capybara is an integration testing tool for rack based web applications
+  gem 'capybara'
 end
 
